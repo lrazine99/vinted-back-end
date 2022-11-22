@@ -11,9 +11,9 @@ const cors = require("cors");
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
-  cloud_name: "dvlj4hoz2",
-  api_key: "749249967228291",
-  api_secret: "Pg39-Pfv59SE0FhmdIINuEoq0Cc",
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
   secure: true,
 });
 
