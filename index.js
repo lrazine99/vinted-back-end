@@ -33,45 +33,6 @@ app.use(userRoutes);
 const offerRoutes = require("./routes/offer");
 app.use(offerRoutes);
 
-app.get("/offers", async (req, res) => {
-  try {
-    // console.log(req.query.name);
-    // const offers = await Offer.find({
-    //   product_name: new RegExp(req.query.name, "i"),
-    // }).select("product_name product_price -_id");
-
-    // gte => greater than or equal
-    //lte => loiwer than or equal
-    // const offers = await Offer.find({
-    //   product_price: { $gte: req.query.priceMin, $lte: req.query.priceMax },
-    // }).select("product_name product_price -_id");
-
-    // const offers = await Offer.find({
-    //   product_price: { $gte: req.query.priceMin, $lte: req.query.priceMax },
-    //   product_name: new RegExp(req.query.title, "i"),
-    // })
-    //   .sort({ product_price: "asc" })
-    //   .select("product_name product_price -_id");
-
-    // limit permet de limiter le nombre de résultats, ici par exemple, on veut 5 résultats par page :
-
-    // skip = (page * limit) - limit
-
-    // AIDE POUR L'EXO :
-
-    const filters = {};
-
-    const offers = await Offer.find();
-    // .sort({ product_price: "asc" })
-    // .skip(10)
-    // .limit(5)
-    // .select("product_name product_price -_id");
-    res.status(200).json(offers);
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-});
-
 // faire la route app.all (toujours la laisser tout en bas)
 app.all("*", (req, res) => {
   try {
