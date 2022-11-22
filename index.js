@@ -83,5 +83,5 @@ app.all("*", (req, res) => {
 
 // lancer le serveur (le mettre à l'écoute/ en ligne)
 app.listen(process.env.PORT, () => {
-  console.log("Server is on fire 🔥 on port " + PORT);
+  console.log("Server is on fire 🔥 on port " + process.env.PORT);
 });
