@@ -2,6 +2,6 @@
 back end of vinted app mock build with nodejs express
 ## npm i
 install project dependencies
-# npm start
+## npm start
 start the server
 
